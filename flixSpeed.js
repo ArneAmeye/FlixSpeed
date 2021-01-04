@@ -5,8 +5,15 @@ var feedback = document.createElement('div');
 feedback.classList.add('FlixSpeed__Feedback')
 feedback.innerHTML = `<p class="FlixSpeed__Feedback--speed"><span>1</span>x</p>`
 
-//Wait for Video player controls to be added to the DOM, then this function adds more controls if user's settings allow us.
-waitForVideoElementToDisplay('.PlayerControls--control-element.video-title',100);
+//Listen for messages from background.js
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.changedHistoryState == true){
+        if(document.querySelector('.PlayerControls--control-element.video-title') == null && window.location.pathname.indexOf("/watch") > -1 ){
+            //Wait for Video element to be added to the DOM, this function then adds our needed elements.
+            waitForVideoElementToDisplay('.PlayerControls--control-element.video-title',100);
+        }
+    }
+});
 
 window.addEventListener('keydown', function (e) {
     //only start listening for key events when there is a video element found in the DOM.
@@ -59,9 +66,9 @@ window.addEventListener('click', function (e) {
 });
 
 function waitForVideoElementToDisplay(selector, time) {
-    if(document.querySelector(selector)!=null) {
+    if(document.querySelector(selector)!= null) {
         addControls(); //Checks settings and adds controls if applicable
-        document.querySelector('video').parentNode.appendChild(feedback); //Add video playback feedback element to DOM
+        addFeedbackContainer(); //Add video playback feedback element to DOM
         return;
     }
     else {

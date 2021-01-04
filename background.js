@@ -24,5 +24,11 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
         file: 'css/flixSpeed.css',
         runAt: 'document_end'
     });
-}, {url: [{hostContains: 'netflix.com'}]
-});
+}, {url: [{hostContains: 'netflix.com'}] });
+
+//Check when the url is dynamically changed on Netflix (usually video being changed), and send message to flixSpeed.js
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+    chrome.tabs.sendMessage(details.tabId, {changedHistoryState: true}, function(response) {
+        //... response handling here
+    });
+}, {url: [{hostContains: 'netflix.com'}] });
