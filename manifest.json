@@ -1,6 +1,6 @@
 {
     "name": "FlixSpeed",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Speed up or slow down Netflix's video playback!",
     "permissions": [
         "storage",
