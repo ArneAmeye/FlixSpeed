@@ -1,0 +1,76 @@
+body{
+    box-sizing: border-box;
+    width: 300px;
+    font-family: "Poppins", sans-serif;
+}
+
+.FlixSpeed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #AF0C19;
+}
+.FlixSpeed--logo{
+    display: block;
+    width: 3em;
+    height: 3em;
+}
+.FlixSpeed--title{
+    padding-left: 0.5em;
+}
+
+.Settings__Title{
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.Settings__KeyShortcuts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Settings__Speedup, .Settings__Slowdown{
+    padding: 0em 0.5em;
+}
+
+.Settings__Speedup--label, .Settings__Slowdown--label, .Settings__FlixSpeedOnly--label{
+    display: block;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.Settings__Speedup--input, .Settings__Slowdown--input{
+    border-radius: 5px;
+    border: 2px solid rgba(266, 18, 33, 0.9);
+    padding: 0.3em;
+    width: 4em;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+.Settings__Speedup--input::placeholder, .Settings__Slowdown--input::placeholder{
+    text-align: center;
+}
+
+.Settings__Controls{
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.Settings__Controls--label{
+    margin-left: 1em;
+}
+
+.Settings__FlixSpeedOnly{
+    margin-top: 1.5em;
+}
+
+.FlixSpeed__Donate--btn{
+    width: 8em;
+    display: block;
+    margin: 2em auto 0em auto;
+}
