@@ -16,13 +16,13 @@ chrome.runtime.onInstalled.addListener(function() {
 
 //Inject flixSpeed logic into active tab when it equals Netflix.
 chrome.webNavigation.onCompleted.addListener(function(details) {
-    chrome.tabs.executeScript(details.tabId, {
-        file: 'flixSpeed.js',
-        runAt: 'document_end'
+    chrome.scripting.executeScript({
+        target: {tabId: details.tabId},
+        files: ['flixSpeed.js'],
     });
-    chrome.tabs.insertCSS(details.tabId, {
-        file: 'css/flixSpeed.css',
-        runAt: 'document_end'
+    chrome.scripting.insertCSS({
+        target: {tabId: details.tabId},
+        files: ['css/flixSpeed.css'],
     });
 }, {url: [{hostContains: 'netflix.com'}] });
 

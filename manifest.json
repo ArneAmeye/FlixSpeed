@@ -1,28 +1,8 @@
 {
+    "manifest_version": 3,
     "name": "FlixSpeed",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Speed up or slow down Netflix's video playback!",
-    "permissions": [
-        "storage",
-        "webNavigation", "*://*/*"
-    ],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
-    "browser_action": {
-        "default_popup": "settings.html",
-        "default_icon": {
-            "16": "images/FlixSpeed-16x16.png",
-            "19": "images/FlixSpeed-19x19.png",
-            "32": "images/FlixSpeed-32x32.png",
-            "128": "images/FlixSpeed-128x128.png"
-          }
-    },
-    "web_accessible_resources": [
-        "images/flixspeed_slowdown.png",
-        "images/flixspeed_speedup.png"
-    ],
     "icons": {
         "16": "images/FlixSpeed-16x16.png",
         "19": "images/FlixSpeed-19x19.png",
@@ -31,5 +11,31 @@
         "128": "images/FlixSpeed-128x128.png",
         "500": "images/FlixSpeed_original.png"
     },
-    "manifest_version": 2
+    "action": {
+        "default_popup": "settings.html",
+        "default_icon": {
+            "16": "images/FlixSpeed-16x16.png",
+            "19": "images/FlixSpeed-19x19.png",
+            "32": "images/FlixSpeed-32x32.png",
+            "128": "images/FlixSpeed-128x128.png"
+          }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "webNavigation",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "web_accessible_resources": [{
+        "resources": [
+            "images/flixspeed_slowdown.png",
+            "images/flixspeed_speedup.png"
+        ],
+        "matches": ["<all_urls>"]
+    }]
   }

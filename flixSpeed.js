@@ -177,12 +177,12 @@ function addControls(){
             //Create a slowdown button
             let slowdownBtn = document.createElement('div');
             slowdownBtn.classList.add('FlixSpeed__ControlBtn')
-            slowdownBtn.innerHTML = `<img class="FlixSpeed__ControlBtn--icon" data-flixspeed="slowdown" src="${chrome.extension.getURL('images/flixspeed_slowdown.png')}" alt="":></img>`
+            slowdownBtn.innerHTML = `<img class="FlixSpeed__ControlBtn--icon" data-flixspeed="slowdown" src="${chrome.runtime.getURL('images/flixspeed_slowdown.png')}" alt="":></img>`
 
             //Create a speedup button
             let speedupBtn = document.createElement('div');
             speedupBtn.classList.add('FlixSpeed__ControlBtn')
-            speedupBtn.innerHTML = `<img class="FlixSpeed__ControlBtn--icon" data-flixspeed="speedup" src="${chrome.extension.getURL('images/flixspeed_speedup.png')}" alt="":></img>`
+            speedupBtn.innerHTML = `<img class="FlixSpeed__ControlBtn--icon" data-flixspeed="speedup" src="${chrome.runtime.getURL('images/flixspeed_speedup.png')}" alt="":></img>`
 
             //Insert newly created buttons into videoplayer
             if(isNewVideoPlayer == true)
