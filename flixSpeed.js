@@ -9,7 +9,7 @@ var feedback = document.createElement('div');
 feedback.classList.add('FlixSpeed__Feedback')
 feedback.innerHTML = `<p class="FlixSpeed__Feedback--speed"><span>1</span>x</p>`
 
-//Listen for messages from background.js
+//Listen for messages from service_worker.js
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.changedHistoryState == true)
     {
