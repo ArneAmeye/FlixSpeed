@@ -8,47 +8,54 @@
     <link rel="stylesheet" href="css/settings.css">
 </head>
   <body>
-
-    <div class="Settings__Keys">
-
-        <div class="FlixSpeed">
-            <img class="FlixSpeed--logo" src="/images/FlixSpeed_original.png" alt="FlixSpeed">
-            <h2 class="FlixSpeed--title">FlixSpeed</h2>
+    <div class="FlixSpeed">
+        <div class="FlixSpeed__Header">
+            <img class="FlixSpeed__Header--logo" src="/images/FlixSpeed_original.png" alt="FlixSpeed">
+            <h2 class="FlixSpeed__Header--title">FlixSpeed</h2>
         </div>
 
-        <h3 class="Settings__Title">Keyboard shortcuts:</h3>
-
-        <div class="Settings__KeyShortcuts">
-            <div class="Settings__Slowdown">
-                <p class="Settings__Slowdown--label">Slowdown</p>
-                <input type="text" class="Settings__Slowdown--input">
+        <div class="FlixSpeed__Settings">
+            <div class="FlixSpeed__Settings--group">
+                <h3 class="FlixSpeed__Settings--title">Keyboard shortcuts:</h3>
+                <div class="FlixSpeed__Settings--KeyShortcuts">
+                    <div class="FlixSpeed__Settings__Slowdown">
+                        <p class="FlixSpeed__Settings__Slowdown--label">Slowdown</p>
+                        <input type="text" class="FlixSpeed__Settings__Slowdown--input">
+                    </div>
+                    <div class="FlixSpeed__Settings__Speedup">
+                        <p class="FlixSpeed__Settings__Speedup--label">Speedup</p>
+                        <input type="text" class="FlixSpeed__Settings__Speedup--input">
+                    </div>
+                </div>
             </div>
-            <div class="Settings__Speedup">
-                <p class="Settings__Speedup--label">Speedup</p>
-                <input type="text" class="Settings__Speedup--input">
+            <hr>
+
+            <div class="FlixSpeed__Settings--group">
+                <h3 class="FlixSpeed__Settings--title">Videoplayer screen buttons</h3>
+                <div class="FlixSpeed__Settings__Controls">
+                    <input class="FlixSpeed__Settings__Controls--input" type="checkbox" id="flixControls" name="flixControls">
+                    <label class="FlixSpeed__Settings__Controls--label" for="flixControls">Add buttons to the Netflix videoplayer.</label>
+                </div>
+            </div>
+            <hr>
+
+            <!--
+            <div class="FlixSpeed__Settings--group">
+                <div class="FlixSpeed__Settings__FlixSpeedOnly">
+                    <label class="FlixSpeed__Settings__FlixSpeedOnly--label" for="FlixSpeedOnly">Enable only on Netflix</label>
+                    <input class="FlixSpeed__Settings__FlixSpeedOnly--input" type="checkbox" id="FlixSpeedOnly" name="FlixSpeedOnly">
+                </div>
+            </div>
+            <hr>
+            -->
+
+            <div class="FlixSpeed__Settings--group FlixSpeed__Settings__Donate">
+                <a href="https://www.paypal.com/paypalme/arneameye" target="_blank" class="FlixSpeed__Settings__Donate--btn" rel="noopener noreferrer">
+                    <img src="images/FlixSpeed_donate.png" alt="Buy me a coffee?">
+                </a>
             </div>
         </div>
-
-        <div class="Settings__Controls">
-            <input class="Settings__Controls--input" type="checkbox" id="flixControls" name="flixControls">
-            <label class="Settings__Controls--label" for="flixControls">Add buttons to videoplayer.</label>
-        </div>
-
-        <div class="FlixSpeed__Donate">
-            <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick" />
-                <input type="hidden" name="hosted_button_id" value="KPCXENEK7N2VJ" />
-                <input class="FlixSpeed__Donate--btn" type="image" src="images/FlixSpeed_donate.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                <img alt="" border="0" src="https://www.paypal.com/en_BE/i/scr/pixel.gif" width="1" height="1" />
-            </form>
-        </div>
-
     </div>
-
-    <!-- <div class="Settings__FlixSpeedOnly">
-        <label class="Settings__FlixSpeedOnly--label" for="FlixSpeedOnly">Enable only on Netflix</label>
-        <input class="Settings__FlixSpeedOnly--input" type="checkbox" id="FlixSpeedOnly" name="FlixSpeedOnly">
-    </div> -->
 
     <script src="settings.js"></script>
   </body>

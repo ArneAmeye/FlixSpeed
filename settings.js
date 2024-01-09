@@ -1,6 +1,6 @@
 //Set useful variables
-const SpeedupInput = document.querySelector('.Settings__Speedup--input');
-const SlowdownInput = document.querySelector('.Settings__Slowdown--input');
+const SpeedupInput = document.querySelector('.FlixSpeed__Settings__Speedup--input');
+const SlowdownInput = document.querySelector('.FlixSpeed__Settings__Slowdown--input');
 const ControlsCheckbox = document.querySelector('#flixControls');
 //const FlixCheckbox = document.querySelector('#FlixSpeedOnly');
 
