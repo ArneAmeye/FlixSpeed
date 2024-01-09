@@ -1,47 +1,69 @@
+/*** Base ***/
 body{
     box-sizing: border-box;
     width: 300px;
     font-family: "Poppins", sans-serif;
 }
 
-.FlixSpeed{
+hr{
+    width: 80%;
+    display: block;
+    margin: 0.5em auto;
+}
+
+/*** Header ***/
+.FlixSpeed__Header{
     display: flex;
     justify-content: center;
     align-items: center;
     background: #AF0C19;
 }
-.FlixSpeed--logo{
+
+.FlixSpeed__Header--logo{
     display: block;
     width: 3em;
     height: 3em;
 }
-.FlixSpeed--title{
+
+.FlixSpeed__Header--title{
     padding-left: 0.5em;
 }
 
-.Settings__Title{
-    text-align: center;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+/*** Settings: General ***/
+.FlixSpeed__Settings{
+    position: relative;
+    display: block;
+    margin: 1.5em auto;
 }
 
-.Settings__KeyShortcuts{
+.FlixSpeed__Settings--group{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.FlixSpeed__Settings--title{
+    text-align: center;
+    margin-bottom: 0em;
+}
+
+/*** Settings: Keyboard Shortcuts ***/
+.FlixSpeed__Settings--KeyShortcuts{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Settings__Speedup, .Settings__Slowdown{
+.FlixSpeed__Settings__Speedup, .FlixSpeed__Settings__Slowdown{
     padding: 0em 0.5em;
 }
 
-.Settings__Speedup--label, .Settings__Slowdown--label, .Settings__FlixSpeedOnly--label{
+.FlixSpeed__Settings__Speedup--label, .FlixSpeed__Settings__Slowdown--label, .FlixSpeed__Settings__FlixSpeedOnly--label{
     display: block;
     margin-bottom: 0.3em;
     text-align: center;
 }
 
-.Settings__Speedup--input, .Settings__Slowdown--input{
+.FlixSpeed__Settings__Speedup--input, .FlixSpeed__Settings__Slowdown--input{
     border-radius: 5px;
     border: 2px solid rgba(266, 18, 33, 0.9);
     padding: 0.3em;
@@ -51,26 +73,36 @@ body{
     display: block;
     margin: 0 auto;
 }
-.Settings__Speedup--input::placeholder, .Settings__Slowdown--input::placeholder{
+.FlixSpeed__Settings__Speedup--input::placeholder, .FlixSpeed__Settings__Slowdown--input::placeholder{
     text-align: center;
 }
 
-.Settings__Controls{
-    margin-top: 1.5em;
+
+/*** Settings: Video Onscreen Controls ***/
+.FlixSpeed__Settings__Controls{
+    margin-top: 1em;
     display: flex;
     justify-content: center;
 }
 
-.Settings__Controls--label{
-    margin-left: 1em;
+.FlixSpeed__Settings__Controls--label{
+    margin-left: 0.5em;
 }
 
-.Settings__FlixSpeedOnly{
+/*** Settings: FlixSpeed Only ***/
+.FlixSpeed__Settings__FlixSpeedOnly{
     margin-top: 1.5em;
 }
 
-.FlixSpeed__Donate--btn{
+/*** Donate ***/
+.FlixSpeed__Settings__Donate{
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.FlixSpeed__Settings__Donate--btn img{
     width: 8em;
     display: block;
-    margin: 2em auto 0em auto;
+    margin: auto;
 }

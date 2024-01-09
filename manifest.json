@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "FlixSpeed",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "Speed up or slow down Netflix's video playback!",
     "icons": {
         "16": "images/FlixSpeed-16x16.png",
@@ -29,7 +29,8 @@
         "scripting"
     ],
     "host_permissions": [
-        "*://*/*"
+        "*://*.netflix.com/",
+        "*://*.netflix.com/*"
     ],
     "web_accessible_resources": [{
         "resources": [
